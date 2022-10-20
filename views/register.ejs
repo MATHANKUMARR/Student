@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+    <a href="/students"><button class="list">List</button></a>
+    <div class="first">
+        <div class="header">
+            <h1>Registration Form</h1>
+        </div>
+        <form action="/addNewStudent" method="post">
+        <div class="content">
+
+                First Name <br><input type="text" id="fname"class="input1" name="fname" placeholder="Enter First Name" /><h5 id="firstname">**first name is missing</h5><br>
+                Last Name <br><input type="text" id="lname" class="input1" name="lname" placeholder="Enter Last Name" /><h5 id="lastname">**last name is missing</h5>
+                Gender <br><input type="radio" name="gender" id="male" value="male"/><label for="html">Male</label>
+                <input type="radio" id="female" name="gender" value="female"/><label for="html">Female</label>
+                <input type="radio" id="others" name="gender" value="others"/><label for="html">Others</label><h5 id="gendercheck">**please mention your gender</h5><br><br>
+                Address <br><input type="text" class="input1" id="address" name="address" placeholder="Enter Address" /><h5 id="addresscheck">**address is missing</h5>
+                Email <br><input type="text" class="input1" id="email" name="email" placeholder="Enter Email" /><h5 id="alreadyemailcheck">**email id already registered</h5><h5 id="invalidemailcheck">**invalid email id</h5><h5 id="emailcheck">**email is missing</h5>
+                Phone <br><input type="text" class="input1" id="phone" name="phone" placeholder="Enter Phone" /><h5 id="alreadyphonecheck">**phone number already registered</h5><h5 id="invalidphonecheck">**incorrect phone number</h5><h5 id="phonecheck">**phone number is missing</h5>
+        </div>
+
+        <div class="footer">
+            <button id="submitbtn" class="submit" type="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+
+</html>

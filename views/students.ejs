@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style1.css" />
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="container">
+        <h2>Registered Students</h2>
+
+        <table>
+            <caption>Students List</caption>
+            <p1>Total records - |<p2><%=count %></p2>|</p1>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th style="text-align: center;">Action</th>
+            </tr>
+
+            <% students.forEach( function(student){ %>
+                <tr>
+                    <td>
+                        <%= student.first_name %>
+                    </td>
+                    <td>
+                        <%= student.last_name %>
+                    </td>
+                    <td>
+                        <%= student.gender %>
+                    </td>
+                    <td>
+                        <%= student.address %>
+                    </td>
+                    <td>
+                        <%= student.email %>
+                    </td>
+                    <td>
+                        <%= student.phone %>
+                    </td>
+                    <td><a href="/update/<%= student.student_id %>"><button class="update">Update</button></a>&nbsp&nbsp&nbsp&nbsp<a
+                            href="/deleteStudentData/<%= student.student_id %>"><button class="delete">Delete</button></a></td>
+                </tr>
+                <% }) %>
+        </table>
+        <a href="/"><button class="create">Add Student</button></a>
+
+    </div>
+</body>
+
+</html>

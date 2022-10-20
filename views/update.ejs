@@ -1,0 +1,60 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/../css/style3.css" />
+    <script>
+        window.onload = function () {
+            if (!"<%=data.gender%>".localeCompare("male")){
+                let radiobtn = document.getElementById("male");
+                radiobtn.checked = true;
+            }else if(!"<%=data.gender%>".localeCompare("female")){
+                let radiobtn1 = document.getElementById("female");
+                radiobtn1.checked = true;
+            }else if(!"<%=data.gender%>".localeCompare("others")){
+                let radiobtn2 = document.getElementById("others");
+                radiobtn2.checked = true;
+            }
+        };
+    </script>
+<title>Student Registration Form</title>
+</head>
+
+<body>
+    <div class="first">
+
+        <div class="header">
+            <h1>Update Student Details</h1>
+        </div>
+
+        <div class="content">
+
+            <form action="/updateStudentData" method="post" name="updateForm">
+                <input type="text" class="input1" value="<%=data.student_id%>" name="student_id"
+                    placeholder="Enter Student Id" hidden required/><br>
+                First Name <br><input type="text" class="input1" value="<%=data.first_name%>" required name="fname"
+                    placeholder="Enter First Name" /><br>
+                Last Name <br><input type="text" class="input1"  required value="<%= data.last_name%>" name="lname"
+                    placeholder="Enter Last Name" /><br>
+                Gender <br><input type="radio" name="gender" id="male" value="male" /><label for="html">Male</label>
+                <input type="radio" id="female" name="gender" value="female" /><label for="html">Female</label>
+                <input type="radio" id="others" name="gender" value="others" /><label for="html">Others</label><br><br>
+                Address <br><input type="text" class="input1" value="<%= data.address%>" required  name="address"
+                    placeholder="Enter Address" /><br>
+                Email <br><input type="text" class="input1"  required value="<%= data.email%>" name="email"
+                    placeholder="Enter Email" /><br>
+                Phone <br><input type="text" class="input1"  required value="<%= data.phone%>" name="phone"
+                    placeholder="Enter Phone" /><br>
+                <button type="submit">Update</button>
+            </form>
+
+        </div>
+
+        <div class="footer">
+        </div>
+
+    </div>
+</body>
+
+</html>

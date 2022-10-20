@@ -1,0 +1,42 @@
+table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;  
+    margin-right: auto;  
+}
+th,td {
+    padding: 10px;
+}
+th {
+    background-color: #FFB500;
+    font-size: 20px;
+}
+td {
+    background-color: #FDDF95;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+h2{  
+    text-align: center;
+}
+.create{
+    margin-left: 45%;
+    display: inline-block;
+    margin-top: 1%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+p1{
+    padding: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Monospace;
+}
